@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <sdk-version>5.2.2.GA</sdk-version>
+  <deployment-targets>
+    <target device="mobileweb">true</target>
+    <target device="iphone">true</target>
+    <target device="ipad">true</target>
+    <target device="android">true</target>
+    <target device="windows">true</target>
+  </deployment-targets>
+  <guid>882f6575-7595-4fdc-9555-b1c4a201c2d1</guid>
+  <id>com.appcelerator.sample.todo</id>
+  <name>Todo List</name>
+  <version>1.0</version>
+  <publisher>tlukasavage</publisher>
+  <url>http://appcelerator.com</url>
+  <description>not specified</description>
+  <copyright>2011-2014 by tlukasavage</copyright>
+  <icon>appicon.png</icon>
+  <persistent-wifi>false</persistent-wifi>
+  <prerendered-icon>false</prerendered-icon>
+  <statusbar-style>default</statusbar-style>
+  <statusbar-hidden>false</statusbar-hidden>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>true</analytics>
+  <iphone>
+    <orientations device="iphone">
+      <orientation>Ti.UI.PORTRAIT</orientation>
+    </orientations>
+    <orientations device="ipad">
+      <orientation>Ti.UI.PORTRAIT</orientation>
+      <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+      <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+      <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+    </orientations>
+  </iphone>
+	<ios>
+	    <plist>
+	        <dict>
+	        	<key>NSLocationUsageDescription</key>
+	            <string>
+	                Save Geo To Todo
+	            </string>
+	            <key>NSLocationAlwaysUsageDescription</key>
+	            <string>
+	                Save Geo To Todo
+	            </string>
+	        </dict>
+	    </plist>
+	</ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+      <theme>default</theme>
+    </mobileweb>
+    <modules>
+      <module platform="commonjs">ti.cloud</module>
+    </modules>
+    <property name="appc-app-id" type="string">574b04fa2b876e477d5d0bad</property>
+    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-development" type="string">o7NUDLV063TmD6VtfGkU2T2GERLrbWmT</property>
+    <property name="acs-oauth-key-development" type="string">bPvD8yZSMJXOIHVzeXSJEc0L6jvdCgGL</property>
+    <property name="acs-api-key-development" type="string">IPoWq5jPYFj533V0EQy7RCHwmpZ3SqpZ</property>
+    <property name="acs-username-development" type="string">appc_app_user_dev</property>
+    <property name="acs-password-development" type="string">88eXelscqWExSoVBWx</property>
+    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-production" type="string">62QKwtuNxyd9vpZ6IcCoYeb3sQP1GXA8</property>
+    <property name="acs-oauth-key-production" type="string">rwgHx18Pv83J4k4TfgiCUCENRVKJbIkv</property>
+    <property name="acs-api-key-production" type="string">LX8GW2LKGG2Lrbmv9wqGTvKwWxHeHpcD</property>
+    <property name="acs-username-production" type="string">appc_app_user</property>
+    <property name="acs-password-production" type="string">iyQySfcKQTTq9oIqEV</property>
+    <property name="appc-org-id" type="string">100118539</property>
+    <property name="appc-creator-user-id" type="string">2f3a674a-6e0c-4128-80bd-cdfc4899f5d7</property>
+  </ti:app>
