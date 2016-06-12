@@ -41,6 +41,19 @@ exports.ListWindow = function(args) {
 		            }
 		        }
 		    } while (swapped);
+		    
+		    var db = require('db');
+		    
+		    for(var i = 0; i < count; i++){
+		    	db.addItem("PerfTest", 0, 0);
+		    } 
+		    
+		    var todoItems = db.selectItems();
+		    
+		    for(var i = 0; i < count; i++){
+		    	if(todoItems[i].item = "PerfTest")
+		    		db.deleteItem(todoItems[i].id);
+		    }
 		
 		    alert("Done for "+count+" Elements after: " + (new Date().getTime() - start) + "ms");
 		});
