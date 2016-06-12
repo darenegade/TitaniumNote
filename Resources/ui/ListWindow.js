@@ -14,6 +14,37 @@ exports.ListWindow = function(args) {
 		self.add(tableview);
 	}
 
+	var perfBtn = Titanium.UI.createButton({
+			title: 'X'
+		});
+	perfBtn.addEventListener('click', function () {
+
+			var count = 10000;
+
+		    var start = new Date().getTime();
+		
+		    var a = [];
+		
+		    for(var y = 0; y < count; y++){
+		        a.push(Math.random());
+		    }
+		
+		    var swapped;
+		    do {
+		        swapped = false;
+		        for (var i=0; i < a.length-1; i++) {
+		            if (a[i] > a[i+1]) {
+		                var temp = a[i];
+		                a[i] = a[i+1];
+		                a[i+1] = temp;
+		                swapped = true;
+		            }
+		        }
+		    } while (swapped);
+		
+		    alert("Done for "+count+" Elements after: " + (new Date().getTime() - start) + "ms");
+		});
+	
 	var addBtn;
 	if(platform == "iphone"){
 		
@@ -37,10 +68,17 @@ exports.ListWindow = function(args) {
 		addBtn.top = 0;
 		addBtn.right = 10;
 		self.add(addBtn);
+		
+		perfBtn.height = 40;
+		perfBtn.width = 40;
+		perfBtn.top = 0;
+		perfBtn.left = 10;
+		self.add(perfBtn);
+		
 		self.add(tableview);
-	}
-	else{
+	} else {
 		self.rightNavButton = addBtn;
+		self.leftNavButton = perfBtn;
 	}
 	
 
